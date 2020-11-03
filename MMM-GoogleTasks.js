@@ -1,7 +1,6 @@
 Module.register("MMM-GoogleTasks",{
 	// Default module config.
 	defaults: {
-
 		listID: "", // List ID (see authenticate.js)
 		maxResults: 10,		
 		showCompleted: false, //set showCompleted and showHidden true
@@ -72,11 +71,11 @@ Module.register("MMM-GoogleTasks",{
 				if (this.config.ordering === "date") {
 					self.tasks = self.tasks.sort((a, b) => moment(a.due).valueOf() - moment(b.due).valueOf()); 
 				}
-				self.updateDom(self.config.animationSpeed)
+				self.updateDom(self.config.animationSpeed);
 			} else {
 				self.tasks = null;
-				Log.info("No tasks found.")
-				self.updateDom(self.config.animationSpeed)
+				Log.info("No tasks found.");
+				self.updateDom(self.config.animationSpeed);
 			}
 		}
 	},
@@ -89,7 +88,7 @@ Module.register("MMM-GoogleTasks",{
 
 		var numTasks = 0;
 		if(this.tasks) {
-			var numTasks = Object.keys(this.tasks).length;
+			numTasks = Object.keys(this.tasks).length;
 		}
 
 		if (!this.tasks) {
@@ -138,8 +137,9 @@ Module.register("MMM-GoogleTasks",{
 
 			wrapper.appendChild(titleWrapper);
 			wrapper.appendChild(dateWrapper);
-		};
+		}
 
 		return wrapper;
 	}
 });
+
