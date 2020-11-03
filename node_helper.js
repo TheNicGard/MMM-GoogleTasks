@@ -68,6 +68,7 @@ module.exports = NodeHelper.create({
             maxResults: config.maxResults,
             showCompleted: config.showCompleted,
             showHidden: config.showHidden,
+            ordering: config.ordering,
         }, (err, res) => {
             if (err) return console.error('The API returned an error: ' + err);
 
