@@ -100,7 +100,6 @@ Module.register("MMM-GoogleTasks",{
 
 		var titleWrapper, dateWrapper, noteWrapper;
 
-		//this.tasks.forEach((item, index) => {
 		for (i = 0; i < numTasks; i++) {
 			item = this.tasks[i];
 			titleWrapper = document.createElement('div');
