@@ -70,8 +70,7 @@ Module.register("MMM-GoogleTasks",{
 			if (payload.items) {
 				self.tasks = payload.items;
 				if (this.config.ordering === "date") {
-					var sortedTasks = self.tasks.sort =((a, b) => moment(a.due).valueOf() - moment(b.due).valueOf()); 
-					self.tasks = sortedTasks;
+					self.tasks = self.tasks.sort((a, b) => moment(a.due).valueOf() - moment(b.due).valueOf()); 
 				}
 				self.updateDom(self.config.animationSpeed)
 			} else {
